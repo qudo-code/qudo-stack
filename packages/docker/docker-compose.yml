@@ -1,0 +1,42 @@
+# replace "dev" with project name
+name: dev-shared
+networks:
+  dev-network:
+    driver: bridge
+volumes:
+  dev-volume:
+services:
+  dev-redis:
+    networks:
+      - dev-network
+    container_name: redis
+    image: redis
+    ports:
+      - '6379:6379'
+  dev-upstash:
+    networks:
+      - dev-network
+    container_name: redis-upstash
+    ports:
+      - '8002:80'
+    image: hiett/serverless-redis-http:latest
+    environment:
+      SRH_MODE: env
+      SRH_TOKEN: example_token
+      # Using `redis` hostname:port since they're in the same Docker network.
+      SRH_CONNECTION_STRING: 'redis://redis:6379'
+  dev-database:
+    image: postgres:latest
+    container_name: dev-postgres
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=dev
+    ports:
+      - '5436:5432'
+    command: -c listen_addresses=0.0.0.0
+    restart: unless-stopped
+    networks:
+      - dev-network
+    volumes:
+      - dev-volume:/var/lib/postgresql/data

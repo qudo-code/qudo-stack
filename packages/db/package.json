@@ -1,0 +1,22 @@
+{
+  "name": "@repo/db",
+  "description": "database",
+  "authors": "qudo",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "@types/node": "^22.9.0",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.28.1",
+    "drizzle-orm": "^0.36.3",
+    "drizzle-typebox": "^0.1.1",
+    "pg": "^8.13.1"
+  },
+  "scripts": {
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:pull": "drizzle-kit pull"
+  }
+}

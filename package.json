@@ -1,0 +1,29 @@
+{
+  "name": "qudo-stack",
+  "version": "1.0.0",
+  "authors": "matr",
+  "description": "asset management kit",
+  "scripts": {
+    "dev": "dotenv -- bun run --filter @repo/service dev",
+    "start": "dotenv -- bun run --filter @repo/service start",
+    "docker:up": "dotenv -- bun run --filter @repo/docker up",
+    "docker:down": "dotenv -- bun run --filter @repo/docker down",
+    "docker:stop": "dotenv -- bun run --filter @repo/docker stop",
+    "docker:start": "dotenv -- bun run --filter @repo/docker start",
+    "db:generate": "dotenv -- bun run --filter @repo/db db:generate",
+    "db:migrate": "dotenv -- bun run --filter @repo/db db:migrate",
+    "db:push": "dotenv -- bun run --filter @repo/db db:push",
+    "db:pull": "dotenv -- bun run --filter @repo/db db:pull",
+    "clean:deps": "rm -rf ./*/**/node_modules ./node_modules",
+    "clean:vite": "pkill -f vite || true && sleep 1",
+    "reinstall": "pnpm clean:deps && pnpm i"
+  },
+  "dependencies": {
+    "@types/node": "^22.9.0",
+    "bun": "^1.1.34"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^7.4.2",
+    "prettier": "3.3.3"
+  }
+}
