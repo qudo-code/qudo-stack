@@ -1,6 +1,14 @@
 # qudo
+Here's a cool stack:
 
-## Development
+### Batteries Included
+- Elysia backend (www app)
+  - Swagger doc generation
+  - Endpoint input validation based on Drizzle schemas
+  - Renders JSX/HTML
+- Drizzle ORM (db package)
+- Docker for dev (docker package)
+- Pnpm & bun based (super fast)
 
 ### Apps/Packages
 
@@ -10,6 +18,8 @@
   - `http://localhost:3000/*` api routes
 - `📦 /packages/db` drizzle db
 - `📦 /packages/docker` docker
+
+## Development
 
 ### Setup Environment
 
