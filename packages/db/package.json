@@ -15,9 +15,9 @@
   "scripts": {
     "generate": "drizzle-kit generate",
     "migrate": "drizzle-kit migrate",
-    "push": "dotenv -e ../../.env -- drizzle-kit push",
-    "pull": "dotenv -e ../../.env -- drizzle-kit pull",
-    "studio": "dotenv -e ../../.env -- drizzle-kit studio"
+    "push": "drizzle-kit push",
+    "pull": "drizzle-kit pull",
+    "studio": "drizzle-kit studio"
   },
   "devDependencies": {
     "elysia": "^1.1.25"
