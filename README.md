@@ -23,26 +23,32 @@ Here's a cool stack:
 
 ### Setup Environment
 
-Copy/paste `.env.example` -> `.env`
+Install [Bun](https://bun.sh/docs/installation) then copy/paste `.env.example` -> `.env`
+
+## Manage Docker Database
+
+- `bun docker up` to get dockers goin
+- `bun db push` to push drizzle shii
+- `bun db studio` to view the db
+- `bun docker down && bun docker up` (as needed) clear & rebuild containers
 
 ### Run Dev Server
 
-- `pnpm i `
-- `pnpm docker up` to get dockers goin
-- `pnpm db push` to push drizzle shii
-- `pnpm dev`
+- `bun i `
+
+- `bun dev`
 
 ### DB
 
-- `pnpm db generate` to generate the db
-- `pnpm db migrate` to migrate the db
-- `pnpm db pull` to pull the db
-- `pnpm db push` to push the db
-- `pnpm db studio` to studio the db
+- `bun db generate` to generate the db
+- `bun db migrate` to migrate the db
+- `bun db pull` to pull the db
+- `bun db push` to push the db
+- `bun db studio` to studio the db
 
 ### Docker
 
-- `pnpm docker up` to get dockers goin
-- `pnpm docker down` to get dockers down
-- `pnpm docker start` to start the dockers
-- `pnpm docker stop` to stop the dockers
+- `bun docker up` to get dockers goin
+- `bun docker down` to get dockers down
+- `bun docker start` to start the dockers
+- `bun docker stop` to stop the dockers

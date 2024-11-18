@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "authors": "matr",
   "description": "asset management kit",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "scripts": {
     "dev": "bun run --filter www dev",
     "start": "bun run --filter www start",

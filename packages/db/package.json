@@ -13,8 +13,8 @@
     "pg": "^8.13.1"
   },
   "scripts": {
-    "generate": "dotenv -e ../../.env -- drizzle-kit generate",
-    "migrate": "dotenv -e ../../.env -- drizzle-kit migrate",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate",
     "push": "dotenv -e ../../.env -- drizzle-kit push",
     "pull": "dotenv -e ../../.env -- drizzle-kit pull",
     "studio": "dotenv -e ../../.env -- drizzle-kit studio"
