@@ -8,10 +8,11 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "bun run --filter www dev",
-    "start": "bun run --filter www start",
-    "docker": "bun run --filter docker",
-    "db": "bun run --filter db",
+    "_": "bun --env-file .env",
+    "dev": "bun _ --filter www dev",
+    "start": "bun _ --filter www start",
+    "docker": "bun _ --filter docker",
+    "db": "bun _ --filter db",
     "clean:deps": "rm -rf ./*/**/node_modules ./node_modules",
     "clean:vite": "pkill -f vite || true && sleep 1",
     "reinstall": "pnpm clean:deps && pnpm i"
