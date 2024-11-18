@@ -1,9 +1,8 @@
 {
-  "name": "@repo/db",
+  "name": "db",
   "description": "database",
   "authors": "qudo",
   "version": "1.0.0",
-  "main": "./index.ts",
   "dependencies": {
     "@paralleldrive/cuid2": "^2.2.2",
     "@types/node": "^22.9.0",
@@ -14,9 +13,13 @@
     "pg": "^8.13.1"
   },
   "scripts": {
-    "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
-    "db:push": "drizzle-kit push",
-    "db:pull": "drizzle-kit pull"
+    "generate": "dotenv -e ../../.env -- drizzle-kit generate",
+    "migrate": "dotenv -e ../../.env -- drizzle-kit migrate",
+    "push": "dotenv -e ../../.env -- drizzle-kit push",
+    "pull": "dotenv -e ../../.env -- drizzle-kit pull",
+    "studio": "dotenv -e ../../.env -- drizzle-kit studio"
+  },
+  "devDependencies": {
+    "elysia": "^1.1.25"
   }
 }

@@ -1,0 +1,101 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "qudo",
+  "collectionId": "662543ae-2e98-4d10-a2b5-052219117df3",
+  "dateExported": "2024-11-18T05:06:42.441Z",
+  "version": "1.2",
+  "folders": [],
+  "requests": [
+    {
+      "_id": "92deebbe-3240-486a-ac4e-d99748ebc49f",
+      "colId": "662543ae-2e98-4d10-a2b5-052219117df3",
+      "containerId": "",
+      "name": "Create User",
+      "url": "http://localhost:3000/user",
+      "method": "PUT",
+      "sortNum": 10000,
+      "created": "2024-11-18T01:14:54.180Z",
+      "modified": "2024-11-18T01:14:54.180Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"username\": \"qudo\"\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "d0bf4b9b-dc5c-4f52-8d8e-652f8d62d390",
+      "colId": "662543ae-2e98-4d10-a2b5-052219117df3",
+      "containerId": "",
+      "name": "Update User",
+      "url": "http://localhost:3000/user",
+      "method": "PATCH",
+      "sortNum": 20000,
+      "created": "2024-11-18T01:39:01.598Z",
+      "modified": "2024-11-18T01:39:01.598Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"id\": \"qgieeo81mg5zix25982ox8s9\",\n  \"username\": \"qudo2\"\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "804235da-7423-4780-95f7-ba1e6bb76f82",
+      "colId": "662543ae-2e98-4d10-a2b5-052219117df3",
+      "containerId": "",
+      "name": "Get User",
+      "url": "http://localhost:3000/user",
+      "method": "PUT",
+      "sortNum": 20000,
+      "created": "2024-11-18T04:30:22.567Z",
+      "modified": "2024-11-18T04:30:22.567Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"username\": \"qudo\"\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "8fd5ef4e-8e52-4e36-bb8f-60a26aa864ba",
+      "colId": "662543ae-2e98-4d10-a2b5-052219117df3",
+      "containerId": "",
+      "name": "Delete User",
+      "url": "http://localhost:3000/user",
+      "method": "DELETE",
+      "sortNum": 30000,
+      "created": "2024-11-18T01:39:31.646Z",
+      "modified": "2024-11-18T01:39:31.646Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"id\": \"qgieeo81mg5zix25982ox8s9\",\n  \"username\": \"qudo2\"\n}",
+        "form": []
+      }
+    },
+    {
+      "_id": "e5c3180b-6a0c-470f-baed-905a8be7f540",
+      "colId": "662543ae-2e98-4d10-a2b5-052219117df3",
+      "containerId": "",
+      "name": "Update User",
+      "url": "http://localhost:3000/user",
+      "method": "PATCH",
+      "sortNum": 40000,
+      "created": "2024-11-18T01:39:36.835Z",
+      "modified": "2024-11-18T01:39:36.835Z",
+      "headers": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"id\": \"qgieeo81mg5zix25982ox8s9\",\n  \"username\": \"qudo2\"\n}",
+        "form": []
+      }
+    }
+  ],
+  "settings": {
+    "options": {
+      "baseUrl": "http://localhost:3000"
+    }
+  },
+  "ref": "GAUjhuqD_DK66S_fUd0CdM1ZEMuDOENU2U2JqdNDXdT_3yQCVHxKbHvANvNUXu_ENb0WcLd_mFh-PoQZKowJvQ"
+}

@@ -1,24 +1,25 @@
 {
-  "name": "@repo/service",
+  "name": "www",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts",
-    "start": "bun run src/index.ts"
+    "dev": "dotenv -e ../../.env -- bun run --watch src/server.ts",
+    "start": "dotenv -e ../../.env -- bun run src/server.ts"
   },
   "dependencies": {
+    "@elysiajs/html": "^1.1.1",
+    "@elysiajs/swagger": "^1.1.6",
     "@paralleldrive/cuid2": "^2.2.2",
     "@types/node": "^22.9.0",
     "@types/pg": "^8.11.10",
-    "@repo/db": "workspace:*",
+    "db": "workspace:*",
     "drizzle-kit": "^0.28.1",
     "drizzle-orm": "^0.36.3",
     "drizzle-typebox": "^0.1.1",
-    "elysia": "latest",
     "pg": "^8.13.1"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "elysia": "^1.1.25"
   },
   "override": {
     "@sinclair/typebox": "0.32.4"

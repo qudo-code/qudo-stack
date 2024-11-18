@@ -1,9 +1,9 @@
 {
-    "name": "@repo/docker",
-    "scripts": {
-        "up": "docker compose up -d",
-        "down": "docker compose down --remove-orphans --volumes",
-        "start": "docker compose start",
-        "stop": "docker compose stop"
-    }
+  "name": "docker",
+  "scripts": {
+    "up": "dotenv -e ../../.env -- docker compose up -d",
+    "down": "dotenv -e ../../.env -- docker compose down --remove-orphans --volumes",
+    "start": "dotenv -e ../../.env -- docker compose start",
+    "stop": "dotenv -e ../../.env -- docker compose stop"
+  }
 }

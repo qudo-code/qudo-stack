@@ -1,42 +1,42 @@
-# replace "dev" with project name
-name: dev-shared
+# replace "qudo" with project name
+name: qudo-shared
 networks:
-  dev-network:
+  qudo-network:
     driver: bridge
 volumes:
-  dev-volume:
+  qudo-volume:
 services:
-  dev-redis:
+  qudo-redis:
     networks:
-      - dev-network
-    container_name: redis
+      - qudo-network
+    container_name: qudo-redis
     image: redis
     ports:
-      - '6379:6379'
-  dev-upstash:
+      - "6379:6379"
+  qudo-upstash:
     networks:
-      - dev-network
-    container_name: redis-upstash
+      - qudo-network
+    container_name: qudo-redis-upstash
     ports:
-      - '8002:80'
+      - "8002:80"
     image: hiett/serverless-redis-http:latest
     environment:
       SRH_MODE: env
       SRH_TOKEN: example_token
       # Using `redis` hostname:port since they're in the same Docker network.
-      SRH_CONNECTION_STRING: 'redis://redis:6379'
-  dev-database:
+      SRH_CONNECTION_STRING: "redis://redis:6379"
+  qudo-database:
     image: postgres:latest
-    container_name: dev-postgres
+    container_name: qudo-postgres
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=mysecretpassword
-      - POSTGRES_DB=dev
+      - POSTGRES_DB=qudo
     ports:
-      - '5436:5432'
+      - "5436:5432"
     command: -c listen_addresses=0.0.0.0
     restart: unless-stopped
     networks:
-      - dev-network
+      - qudo-network
     volumes:
-      - dev-volume:/var/lib/postgresql/data
+      - qudo-volume:/var/lib/postgresql/data
