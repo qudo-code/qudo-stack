@@ -10,7 +10,7 @@
   "scripts": {
     "_": "bun --env-file .env",
     "dev": "bun _ --filter www dev",
-    "start": "bun _ --filter www start",
+    "start": "bun --filter www start",
     "docker": "bun _ --filter docker",
     "db": "bun _ --filter db",
     "clean:deps": "rm -rf ./*/**/node_modules ./node_modules",
