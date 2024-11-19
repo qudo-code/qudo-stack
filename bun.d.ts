@@ -1,4 +1,4 @@
-declare module "bun" {
+declare module "node" {
   interface Env {
     DATABASE_URL: string;
     REDIS_TOKEN: string;

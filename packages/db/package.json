@@ -20,6 +20,7 @@
     "studio": "drizzle-kit studio"
   },
   "devDependencies": {
-    "elysia": "^1.1.25"
+    "elysia": "^1.1.25",
+    "env": "workspace:*"
   }
 }
