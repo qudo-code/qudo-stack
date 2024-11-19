@@ -2,6 +2,7 @@ import { Elysia } from "elysia";
 import { swagger } from "@elysiajs/swagger";
 import { userRoutes } from "./routes/user";
 import { homeRoute } from "./routes/home/home";
+import { getBaseUrl } from "lib/network";
 
 // Create app
 const app = new Elysia();

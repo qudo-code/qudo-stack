@@ -15,7 +15,8 @@
     "drizzle-kit": "^0.28.1",
     "drizzle-orm": "^0.36.3",
     "drizzle-typebox": "^0.1.1",
-    "pg": "^8.13.1"
+    "pg": "^8.13.1",
+    "lib": "workspace:*"
   },
   "devDependencies": {
     "bun-types": "latest",
